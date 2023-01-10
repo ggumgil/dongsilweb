@@ -23,26 +23,26 @@ class WebScaffold extends StatelessWidget {
         title: Text(texts['title']!, style: title),
         actions: [
           TextButton(
-            onPressed: (() {
-              _buildPage(context, const WhatIWantPage());
+            onPressed: (() async {
+              await _buildPage(context, const WhatIWantPage());
             }),
             child: Text(texts['sub_title_1']!, style: subTitle),
           ),
           TextButton(
-            onPressed: (() {
-              _buildPage(context, const NotionPage());
+            onPressed: (() async {
+              await _buildPage(context, const NotionPage());
             }),
             child: Text(texts['sub_title_2']!, style: subTitle),
           ),
           TextButton(
-            onPressed: (() {
-              _buildPage(context, const FlutterPage());
+            onPressed: (() async {
+              await _buildPage(context, const FlutterPage());
             }),
             child: Text(texts['sub_title_3']!, style: subTitle),
           ),
           TextButton(
-            onPressed: (() {
-              _buildPage(context, const ProjectsPage());
+            onPressed: (() async {
+              await _buildPage(context, const ProjectsPage());
             }),
             child: Text(texts['sub_title_4']!, style: subTitle),
           ),
@@ -55,13 +55,24 @@ class WebScaffold extends StatelessWidget {
     );
   }
 
-  void _buildPage(BuildContext context, Widget pageWidget) {
-    Navigator.push(
-        context,
-        PageRouteBuilder(
-          pageBuilder: (context, animation, secondaryAnimation) => pageWidget,
-          transitionsBuilder: (context, animation, secondaryAnimation, child) =>
-              child,
-        ));
+  Future<void> _buildPage(BuildContext context, Widget pageWidget) async {
+    await Navigator.push(
+      context,
+      PageRouteBuilder(
+        pageBuilder: (context, animation, secondaryAnimation) => pageWidget,
+        transitionsBuilder: (context, animation, secondaryAnimation, child) {
+          // var begin = const Offset(0.1, 1.0);
+          // var end = Offset.zero;
+          // var tween = Tween(begin: begin, end: end);
+          // var offsetAnimation = animation.drive(tween);
+
+          // return SlideTransition(
+          //   position: offsetAnimation,
+          //   child: child,
+          // );
+          return child;
+        },
+      ),
+    );
   }
 }
