@@ -17,27 +17,34 @@ class HomePage extends StatelessWidget {
           children: [
             Row(
               mainAxisSize: MainAxisSize.max,
-              children: const [
+              children: [
                 SizedBox(
                   width: 300,
-                  height: 300,
+                  height: 500,
                   child: Card(
-                    color: Colors.amber,
+                    color: Colors.amber[300],
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(30)),
+                      side: BorderSide(
+                        color: Theme.of(context).colorScheme.outline,
+                      ),
+                      borderRadius: const BorderRadius.all(Radius.circular(30)),
                     ),
-                    child: Text('hi'),
+                    child: const Center(child: Text('hi')),
                   ),
                 ),
                 Expanded(
                   child: SizedBox(
-                    height: 300,
+                    height: 500,
                     child: Card(
-                      color: Colors.red,
+                      color: Colors.red[300],
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(30)),
+                        side: BorderSide(
+                          color: Theme.of(context).colorScheme.outline,
+                        ),
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(30)),
                       ),
-                      child: Text('hi'),
+                      child: const Center(child: Text('hi')),
                     ),
                   ),
                 ),
@@ -54,7 +61,7 @@ class HomePage extends StatelessWidget {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(30)),
                     ),
-                    child: Text('hi'),
+                    child: Center(child: Text('hi')),
                   ),
                 ),
                 Expanded(
@@ -65,7 +72,7 @@ class HomePage extends StatelessWidget {
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.all(Radius.circular(30)),
                       ),
-                      child: Text('hi'),
+                      child: Center(child: Text('hi')),
                     ),
                   ),
                 ),
@@ -82,7 +89,7 @@ class HomePage extends StatelessWidget {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(30)),
                     ),
-                    child: Text('hi'),
+                    child: Center(child: Text('hi')),
                   ),
                 ),
                 const Expanded(
@@ -93,7 +100,7 @@ class HomePage extends StatelessWidget {
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.all(Radius.circular(30)),
                       ),
-                      child: Text('hi'),
+                      child: Center(child: Text('hi')),
                     ),
                   ),
                 ),
@@ -101,27 +108,35 @@ class HomePage extends StatelessWidget {
             ),
             Row(
               mainAxisSize: MainAxisSize.max,
-              children: const [
+              children: [
                 SizedBox(
                   width: 800,
                   height: 300,
                   child: Card(
-                    color: Colors.amber,
+                    elevation: 12,
+                    color: Colors.amber[100],
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(30)),
+                      side: BorderSide(
+                        color: Theme.of(context).colorScheme.outline,
+                      ),
+                      borderRadius: const BorderRadius.all(Radius.circular(30)),
                     ),
-                    child: Text('hi'),
+                    child: const Center(child: Text('hi')),
                   ),
                 ),
                 Expanded(
                   child: SizedBox(
                     height: 300,
                     child: Card(
-                      color: Colors.red,
+                      color: Colors.red[100],
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(30)),
+                        side: BorderSide(
+                          color: Theme.of(context).colorScheme.outline,
+                        ),
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(30)),
                       ),
-                      child: Text('hi'),
+                      child: const Center(child: Text('hi')),
                     ),
                   ),
                 ),
