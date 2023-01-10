@@ -1,4 +1,10 @@
+import 'dart:ui';
+
+import 'package:dongsilweb/constant/style.dart';
+import 'package:dongsilweb/second.dart';
 import 'package:flutter/material.dart';
+
+import 'constant/text.dart';
 
 void main() {
   runApp(const MyApp());
@@ -30,44 +36,61 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  late int pageViewIndex;
+  final pageController = PageController(initialPage: 0);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        toolbarHeight: 100,
+        automaticallyImplyLeading: false,
+        backgroundColor: Colors.white,
+        toolbarHeight: 80,
         actions: [
           TextButton(
             onPressed: (() {}),
-            child: const Text(
-              '블로그',
-              style: TextStyle(color: Colors.white),
-            ),
+            child: const Text('블로그', style: subTitle),
           ),
           TextButton(
             onPressed: (() {}),
-            child: const Text(
-              '좋아요',
-              style: TextStyle(color: Colors.white),
-            ),
+            child: const Text('좋아요', style: subTitle),
           ),
         ],
-        title: const Text('동실아저씨 블로그'),
+        title: Text(texts['title']!, style: title),
       ),
-      body: PageView(
+      body: Row(
         children: [
           Container(
-            color: Colors.red,
-            child: Center(child: Text('Page1')),
+            width: 300,
+            color: Colors.blue,
+            child: Center(
+              child: TextButton(
+                child: const Text(
+                  '눌러주세요',
+                  style: title,
+                ),
+                onPressed: () {
+                  Navigator.of(context).push(PageRouteBuilder(
+                    pageBuilder: (context, animation, secondaryAnimation) =>
+                        const MySecondPage(),
+                    transitionsBuilder:
+                        (context, animation, secondaryAnimation, child) {
+                      return child;
+                    },
+                  ));
+                },
+              ),
+            ),
           ),
-          Container(
-            color: Colors.amber,
-            child: Center(child: Text('Page2')),
-          ),
-          Container(
-            color: Colors.green,
-            child: Center(child: Text('Page3')),
+          Expanded(
+            child: Container(
+              color: Colors.amber,
+              child: ListView.builder(
+                itemCount: 100,
+                itemBuilder: ((context, index) {
+                  return Text('안녕하세요. 동실아저씨. ${index.toString()}번째 인사');
+                }),
+              ),
+            ),
           ),
         ],
       ),
@@ -78,4 +101,13 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
     );
   }
+}
+
+class AppScrollBehavior extends MaterialScrollBehavior {
+  @override
+  Set<PointerDeviceKind> get dragDevices => {
+        PointerDeviceKind.touch,
+        PointerDeviceKind.mouse,
+        PointerDeviceKind.trackpad,
+      };
 }
