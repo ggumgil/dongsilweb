@@ -83,11 +83,19 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           Expanded(
             child: Container(
-              color: Colors.amber,
+              color: Colors.purple[100],
               child: ListView.builder(
                 itemCount: 100,
                 itemBuilder: ((context, index) {
-                  return Text('안녕하세요. 동실아저씨. ${index.toString()}번째 인사');
+                  return Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Container(
+                        height: 50,
+                        color: Colors.purple[300],
+                        child: Center(
+                            child: Text(
+                                '안녕하세요. 동실아저씨. ${index.toString()}번째 인사'))),
+                  );
                 }),
               ),
             ),
