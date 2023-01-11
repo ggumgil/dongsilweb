@@ -55,6 +55,23 @@ class TextHeadlineSecondary extends StatelessWidget {
   }
 }
 
+class TextHeadline extends StatelessWidget {
+  final String text;
+
+  const TextHeadline({Key? key, required this.text}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: marginBottom12,
+      child: Text(
+        text,
+        style: headlineTextStyle,
+      ),
+    );
+  }
+}
+
 class TextBlockquote extends StatelessWidget {
   final String text;
 

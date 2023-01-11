@@ -264,7 +264,7 @@ class Footer extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 40),
       child: const Align(
         alignment: Alignment.centerRight,
-        child: TextBody(text: "Copyright © 2020"),
+        child: TextBody(text: "Dongsil Copyright © 2023"),
       ),
     );
   }
@@ -379,14 +379,6 @@ class MenuBar extends StatelessWidget {
                       ),
                       TextButton(
                         onPressed: () =>
-                            Navigator.pushNamed(context, Routes.style),
-                        style: menuButtonStyle,
-                        child: const Text(
-                          "STYLE",
-                        ),
-                      ),
-                      TextButton(
-                        onPressed: () =>
                             Navigator.pushNamed(context, Routes.projects),
                         style: menuButtonStyle,
                         child: const Text(
@@ -394,7 +386,8 @@ class MenuBar extends StatelessWidget {
                         ),
                       ),
                       TextButton(
-                        onPressed: () {},
+                        onPressed: () =>
+                            Navigator.pushNamed(context, Routes.post),
                         style: menuButtonStyle,
                         child: const Text(
                           "ABOUT",

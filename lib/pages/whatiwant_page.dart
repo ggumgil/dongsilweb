@@ -2,7 +2,6 @@ import 'package:dongsilweb/widgets/web_card.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/blog.dart';
-import '../widgets/web_scaffold.dart';
 
 class WhatIWantPage extends StatelessWidget {
   const WhatIWantPage({
@@ -35,6 +34,8 @@ class WhatIWantPage extends StatelessWidget {
               height: 200,
               color: Colors.blue,
               text: '이렇게 원하는 것이 있는 나'),
+          divider,
+          const Footer(),
         ],
       ),
     );

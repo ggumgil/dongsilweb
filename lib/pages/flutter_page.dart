@@ -1,6 +1,5 @@
+import 'package:dongsilweb/widgets/blog.dart';
 import 'package:flutter/material.dart';
-
-import '../widgets/web_scaffold.dart';
 
 class FlutterPage extends StatelessWidget {
   const FlutterPage({
@@ -9,8 +8,13 @@ class FlutterPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return WebScaffold(
-      body: Container(color: Colors.amber),
+    return Scaffold(
+      body: Column(
+        children: [
+          const MenuBar(),
+          Container(color: Colors.amber),
+        ],
+      ),
     );
   }
 }
