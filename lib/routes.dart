@@ -5,6 +5,7 @@ class Routes {
   static const String home = "/";
   static const String post = "post";
   static const String style = "style";
+  static const String contact = "contact";
   static const String whatiwant = "whatiwant";
   static const String projects = "projects";
 

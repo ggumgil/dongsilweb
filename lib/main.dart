@@ -1,3 +1,4 @@
+import 'package:dongsilweb/pages/page_list.dart';
 import 'package:dongsilweb/pages/page_post.dart';
 import 'package:dongsilweb/pages/projects_page.dart';
 import 'package:dongsilweb/pages/whatiwant_page.dart';
@@ -39,8 +40,6 @@ class MyApp extends StatelessWidget {
           switch (settings.name) {
             case Routes.home:
               return const HomePage();
-            case Routes.post:
-              return const PostPage();
             case Routes.projects:
               return const ProjectsPage();
             case Routes.whatiwant:
