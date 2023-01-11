@@ -20,31 +20,35 @@ class WebScaffold extends StatelessWidget {
         elevation: 0.1,
         backgroundColor: Colors.white,
         toolbarHeight: 120,
-        title: Text(texts['title']!, style: title),
+        title: Text(texts['title']!, style: headlineTextStyle),
         actions: [
           TextButton(
             onPressed: (() async {
               await _buildPage(context, const WhatIWantPage());
             }),
-            child: Text(texts['sub_title_1']!, style: subTitle),
+            child:
+                Text(texts['sub_title_1']!, style: headlineSecondaryTextStyle),
           ),
           TextButton(
             onPressed: (() async {
               await _buildPage(context, const NotionPage());
             }),
-            child: Text(texts['sub_title_2']!, style: subTitle),
+            child:
+                Text(texts['sub_title_2']!, style: headlineSecondaryTextStyle),
           ),
           TextButton(
             onPressed: (() async {
               await _buildPage(context, const FlutterPage());
             }),
-            child: Text(texts['sub_title_3']!, style: subTitle),
+            child:
+                Text(texts['sub_title_3']!, style: headlineSecondaryTextStyle),
           ),
           TextButton(
             onPressed: (() async {
               await _buildPage(context, const ProjectsPage());
             }),
-            child: Text(texts['sub_title_4']!, style: subTitle),
+            child:
+                Text(texts['sub_title_4']!, style: headlineSecondaryTextStyle),
           ),
           const SizedBox(
             width: 24,

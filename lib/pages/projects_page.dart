@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../widgets/web_scaffold.dart';
-
 class ProjectsPage extends StatelessWidget {
   const ProjectsPage({
     super.key,
@@ -9,7 +7,7 @@ class ProjectsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return WebScaffold(
+    return Scaffold(
       body: Container(color: Colors.red),
     );
   }

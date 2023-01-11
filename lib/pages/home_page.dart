@@ -1,8 +1,7 @@
 import 'dart:ui';
 
+import 'package:dongsilweb/widgets/blog.dart';
 import 'package:flutter/material.dart';
-
-import '../widgets/web_scaffold.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({
@@ -11,10 +10,11 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return WebScaffold(
+    return Scaffold(
       body: SingleChildScrollView(
         child: Column(
           children: [
+            const MenuBar(),
             Row(
               mainAxisSize: MainAxisSize.max,
               children: [
@@ -101,42 +101,6 @@ class HomePage extends StatelessWidget {
                         borderRadius: BorderRadius.all(Radius.circular(30)),
                       ),
                       child: Center(child: Text('hi')),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            Row(
-              mainAxisSize: MainAxisSize.max,
-              children: [
-                SizedBox(
-                  width: 800,
-                  height: 300,
-                  child: Card(
-                    elevation: 12,
-                    color: Colors.amber[100],
-                    shape: RoundedRectangleBorder(
-                      side: BorderSide(
-                        color: Theme.of(context).colorScheme.outline,
-                      ),
-                      borderRadius: const BorderRadius.all(Radius.circular(30)),
-                    ),
-                    child: const Center(child: Text('hi')),
-                  ),
-                ),
-                Expanded(
-                  child: SizedBox(
-                    height: 300,
-                    child: Card(
-                      color: Colors.red[100],
-                      shape: RoundedRectangleBorder(
-                        side: BorderSide(
-                          color: Theme.of(context).colorScheme.outline,
-                        ),
-                        borderRadius:
-                            const BorderRadius.all(Radius.circular(30)),
-                      ),
-                      child: const Center(child: Text('hi')),
                     ),
                   ),
                 ),
