@@ -214,7 +214,7 @@ class ProjectsPage extends StatelessWidget {
                             text: '한 번쯤 파병 용사들의 현재 모습을 보면 어떨까 생각해봅니다.'),
                         const TextBody(
                             text:
-                                '디지털 사진첩 앱을 만들어드리려 추진하였으나, 파병 군인들의 요청으로 디지털화는 취소하게 되어 아쉬운 프로젝트입니다.'),
+                                '저도 한 손 거들까 싶어 디지털 사진첩 앱을 만들어드리려 추진하였으나, 가족의 초상권 문제 제기로 인해 디지털화는 취소하게 되어 아쉬운 프로젝트입니다.'),
                         const TextBody(text: '자세한 내용을 알고 싶으시면 아래 버튼을 눌러주세요.'),
                         Container(
                           alignment: Alignment.centerRight,
