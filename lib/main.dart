@@ -1,5 +1,6 @@
 import 'package:dongsilweb/pages/page_list.dart';
 import 'package:dongsilweb/pages/page_post.dart';
+import 'package:dongsilweb/pages/post_grid_page.dart';
 import 'package:dongsilweb/pages/projects_page.dart';
 import 'package:dongsilweb/pages/whatiwant_page.dart';
 import 'package:flutter/material.dart';
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
             const ResponsiveBreakpoint.autoScale(2460, name: "4K"),
           ],
           background: Container(color: const Color(0xFFF5F5F5))),
-      title: texts['title']!,
+      title: menu['title']!,
       initialRoute: Routes.home,
       onGenerateRoute: (RouteSettings settings) {
         return Routes.fadeThrough(settings, (context) {
@@ -44,6 +45,8 @@ class MyApp extends StatelessWidget {
               return const ProjectsPage();
             case Routes.whatiwant:
               return const WhatIWantPage();
+            case Routes.post:
+              return const GridPostPage();
             default:
               return const SizedBox.shrink();
           }

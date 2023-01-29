@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:dongsilweb/constant/text.dart';
 import 'package:dongsilweb/widgets/blog.dart';
 import 'package:dongsilweb/widgets/text.dart';
 import 'package:flutter/material.dart';
@@ -26,10 +27,7 @@ class HomePage extends StatelessWidget {
                       'assets/images/coffee_paperclips_pencil_angled_bw_w1080.jpg',
                       fit: BoxFit.fitHeight),
                 ),
-                const Expanded(
-                    child: TextBody(
-                        text:
-                            '(자기소개) 안녕하세요. 돌아온 개발자 동실입니다.\n이렇게 찾아주셔서 감사합니다.')),
+                Expanded(child: TextBody(text: contents['introduction']!)),
               ],
             ),
             divider,
