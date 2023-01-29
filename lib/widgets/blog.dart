@@ -1,3 +1,4 @@
+import 'package:dongsilweb/constant/text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -349,7 +350,7 @@ class MenuBar extends StatelessWidget {
                 splashColor: Colors.transparent,
                 onTap: () => Navigator.popUntil(
                     context, ModalRoute.withName(Navigator.defaultRouteName)),
-                child: Text("Dongsil",
+                child: Text(menu['sub_title_1']!,
                     style: GoogleFonts.montserrat(
                         color: textPrimary,
                         fontSize: 30,
@@ -365,40 +366,40 @@ class MenuBar extends StatelessWidget {
                         onPressed: () => Navigator.popUntil(context,
                             ModalRoute.withName(Navigator.defaultRouteName)),
                         style: menuButtonStyle,
-                        child: const Text(
-                          "HOME",
+                        child: Text(
+                          menu['sub_title_2']!,
                         ),
                       ),
                       TextButton(
                         onPressed: () =>
                             Navigator.pushNamed(context, Routes.whatiwant),
                         style: menuButtonStyle,
-                        child: const Text(
-                          "WHAT I WANT",
+                        child: Text(
+                          menu['sub_title_3']!,
                         ),
                       ),
                       TextButton(
                         onPressed: () =>
                             Navigator.pushNamed(context, Routes.projects),
                         style: menuButtonStyle,
-                        child: const Text(
-                          "PROJECTS",
+                        child: Text(
+                          menu['sub_title_4']!,
                         ),
                       ),
                       TextButton(
                         onPressed: () =>
                             Navigator.pushNamed(context, Routes.post),
                         style: menuButtonStyle,
-                        child: const Text(
-                          "ABOUT",
+                        child: Text(
+                          menu['sub_title_5']!,
                         ),
                       ),
                       TextButton(
                         onPressed: () =>
                             Navigator.pushNamed(context, Routes.contact),
                         style: menuButtonStyle,
-                        child: const Text(
-                          "CONTACT",
+                        child: Text(
+                          menu['sub_title_6']!,
                         ),
                       ),
                     ],
