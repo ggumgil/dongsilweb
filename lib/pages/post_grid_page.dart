@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../constant/spacings.dart';
 import '../data/model/grid_item.dart';
 import '../widgets/blog.dart';
 
@@ -7,8 +8,21 @@ const String listItemTitleText = "A BETTER BLOG FOR WRITING";
 const String listItemPreviewText =
     "Sed elementum tempus egestas sed sed risus. Mauris in aliquam sem fringilla ut morbi tincidunt. Placerat vestibulum lectus mauris ultrices eros. Et leo duis ut diam. Auctor neque vitae tempus […]";
 
-class GridPostPage extends StatelessWidget {
+class GridPostPage extends StatefulWidget {
   const GridPostPage({Key? key}) : super(key: key);
+
+  @override
+  State<GridPostPage> createState() => _GridPostPageState();
+}
+
+class _GridPostPageState extends State<GridPostPage> {
+  late List<GridItem> gridItems;
+
+  @override
+  void initState() {
+    gridItems = gridItemArray;
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +33,34 @@ class GridPostPage extends StatelessWidget {
           child: Column(
             children: <Widget>[
               const MenuBar(),
-              const Text('필터 추가'),
+              Row(
+                children: [
+                  TagButton(
+                    onPressed: () {
+                      _setGridItems(null);
+                    },
+                    title: '전체',
+                  ),
+                  const Padding(
+                    padding: paddingLeft12,
+                  ),
+                  TagButton(
+                    onPressed: () {
+                      _setGridItems('snapbody');
+                    },
+                    title: '스냅바디',
+                  ),
+                  const Padding(
+                    padding: paddingLeft12,
+                  ),
+                  TagButton(
+                    onPressed: () {
+                      _setGridItems('knockdoctor');
+                    },
+                    title: '똑똑의사',
+                  )
+                ],
+              ),
               GridView.count(
                 shrinkWrap: true,
                 padding: const EdgeInsets.symmetric(
@@ -30,7 +71,7 @@ class GridPostPage extends StatelessWidget {
                 crossAxisCount: 4,
                 primary: false,
                 children: List.generate(
-                  gridItemArray.length,
+                  gridItems.length,
                   (index) => GridTile(
                     child: Container(
                       decoration: const BoxDecoration(
@@ -39,11 +80,11 @@ class GridPostPage extends StatelessWidget {
                               BorderRadius.all(Radius.circular(15.0))),
                       child: Column(
                         children: [
-                          Text(gridItemArray[index].title),
-                          Text(gridItemArray[index].id),
-                          Text(gridItemArray[index].img),
-                          Text(gridItemArray[index].publisher),
-                          Text(gridItemArray[index].type),
+                          Text(gridItems[index].title),
+                          Text(gridItems[index].id),
+                          Text(gridItems[index].img),
+                          Text(gridItems[index].publisher),
+                          Text(gridItems[index].tag),
                         ],
                       ),
                     ),
@@ -57,5 +98,14 @@ class GridPostPage extends StatelessWidget {
       ),
       backgroundColor: Colors.white,
     );
+  }
+
+  void _setGridItems(String? tag) {
+    setState(() {
+      tag == null
+          ? gridItems = gridItemArray
+          : gridItems =
+              gridItemArray.where((element) => element.tag == tag).toList();
+    });
   }
 }

@@ -1,6 +1,8 @@
-import 'package:dongsilweb/constant/text.dart';
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+import 'package:dongsilweb/constant/text.dart';
 
 import '../constant/colors.dart';
 import '../constant/spacings.dart';
@@ -414,6 +416,27 @@ class MenuBar extends StatelessWidget {
             margin: const EdgeInsets.only(bottom: 30),
             color: const Color(0xFFEEEEEE)),
       ],
+    );
+  }
+}
+
+class TagButton extends StatelessWidget {
+  final VoidCallback onPressed;
+  final String title;
+
+  const TagButton({
+    Key? key,
+    required this.onPressed,
+    required this.title,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return OutlinedButton(
+      onPressed: onPressed,
+      child: Text(
+        title,
+      ),
     );
   }
 }
