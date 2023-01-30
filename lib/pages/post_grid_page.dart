@@ -32,8 +32,10 @@ class _GridPostPageState extends State<GridPostPage> {
           margin: const EdgeInsets.symmetric(horizontal: 32),
           child: Column(
             children: <Widget>[
+              //TODO: 태그버튼들과 메뉴 화면에 고정시키는 방법 찾아보기
               const MenuBar(),
               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   TagButton(
                     onPressed: () {
@@ -58,6 +60,15 @@ class _GridPostPageState extends State<GridPostPage> {
                       _setGridItems('knockdoctor');
                     },
                     title: '똑똑의사',
+                  ),
+                  const Padding(
+                    padding: paddingLeft12,
+                  ),
+                  TagButton(
+                    onPressed: () {
+                      _setGridItems('flutter');
+                    },
+                    title: 'Flutter',
                   )
                 ],
               ),
