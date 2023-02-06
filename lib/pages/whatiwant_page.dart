@@ -1,3 +1,4 @@
+import 'package:dongsilweb/constant/colors.dart';
 import 'package:dongsilweb/widgets/web_card.dart';
 import 'package:flutter/material.dart';
 
@@ -18,22 +19,22 @@ class WhatIWantPage extends StatelessWidget {
             WebCard(
                 width: MediaQuery.of(context).size.width,
                 height: 200,
-                color: Colors.amber,
+                color: randomColor,
                 text: '이렇게 원하는 것이 있는 나'),
             WebCard(
                 width: MediaQuery.of(context).size.width,
                 height: 200,
-                color: Colors.cyan,
+                color: randomColor,
                 text: '이렇게 원하는 것이 있는 나'),
             WebCard(
                 width: MediaQuery.of(context).size.width,
                 height: 200,
-                color: Colors.red,
+                color: randomColor,
                 text: '이렇게 원하는 것이 있는 나'),
             WebCard(
                 width: MediaQuery.of(context).size.width,
                 height: 200,
-                color: Colors.blue,
+                color: randomColor,
                 text: '이렇게 원하는 것이 있는 나'),
             divider,
             const Footer(),
