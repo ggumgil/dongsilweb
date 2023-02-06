@@ -1,12 +1,11 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
+import '../constant/colors.dart';
 import '../constant/spacings.dart';
 import '../data/model/grid_item.dart';
 import '../widgets/blog.dart';
-
-const String listItemTitleText = "A BETTER BLOG FOR WRITING";
-const String listItemPreviewText =
-    "Sed elementum tempus egestas sed sed risus. Mauris in aliquam sem fringilla ut morbi tincidunt. Placerat vestibulum lectus mauris ultrices eros. Et leo duis ut diam. Auctor neque vitae tempus […]";
 
 class GridPostPage extends StatefulWidget {
   const GridPostPage({Key? key}) : super(key: key);
@@ -85,11 +84,12 @@ class _GridPostPageState extends State<GridPostPage> {
                   gridItems.length,
                   (index) => GridTile(
                     child: Container(
-                      decoration: const BoxDecoration(
-                          color: Colors.red,
+                      decoration: BoxDecoration(
+                          color: randomColor,
                           borderRadius:
-                              BorderRadius.all(Radius.circular(15.0))),
+                              const BorderRadius.all(Radius.circular(15.0))),
                       child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(gridItems[index].title),
                           Text(gridItems[index].id),
