@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
 import 'constant/text.dart';
+import 'pages/dashboard_page.dart';
 import 'pages/home_page.dart';
 import 'routes.dart';
 
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         useMaterial3: true,
         colorSchemeSeed: const Color(0xff6750a4),
@@ -49,8 +51,10 @@ class MyApp extends StatelessWidget {
               return const WhatIWantPage();
             case Routes.post:
               return const GridPostPage();
+            case Routes.contact:
+              return const DashBoardPage();
             default:
-              return const SizedBox.shrink();
+              return const HomePage();
           }
         });
       },
