@@ -2,6 +2,8 @@ import 'dart:ui';
 
 import 'package:dongsilweb/constant/text.dart';
 import 'package:dongsilweb/widgets/blog.dart';
+import 'package:dongsilweb/widgets/footer.dart';
+import 'package:dongsilweb/widgets/menu_bar.dart';
 import 'package:dongsilweb/widgets/text.dart';
 import 'package:flutter/material.dart';
 

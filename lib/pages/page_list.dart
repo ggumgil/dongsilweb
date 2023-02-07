@@ -1,3 +1,6 @@
+import 'package:dongsilweb/widgets/footer.dart';
+import 'package:dongsilweb/widgets/menu_bar.dart';
+import 'package:dongsilweb/widgets/navigation.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/blog.dart';

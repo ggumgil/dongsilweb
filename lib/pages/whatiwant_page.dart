@@ -1,4 +1,6 @@
 import 'package:dongsilweb/constant/colors.dart';
+import 'package:dongsilweb/widgets/footer.dart';
+import 'package:dongsilweb/widgets/menu_bar.dart';
 import 'package:dongsilweb/widgets/web_card.dart';
 import 'package:flutter/material.dart';
 

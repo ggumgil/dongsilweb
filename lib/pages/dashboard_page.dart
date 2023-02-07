@@ -3,8 +3,9 @@ import 'dart:ui';
 import 'package:dongsilweb/constant/colors.dart';
 import 'package:dongsilweb/gen/assets.gen.dart';
 import 'package:dongsilweb/model/side_menu_model.dart';
-import 'package:dongsilweb/widgets/blog.dart';
 import 'package:dongsilweb/widgets/carousel.dart';
+import 'package:dongsilweb/widgets/footer.dart';
+import 'package:dongsilweb/widgets/menu_bar.dart';
 import 'package:flutter/material.dart';
 
 class DashBoardPage extends StatelessWidget {

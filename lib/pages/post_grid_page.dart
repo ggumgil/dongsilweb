@@ -1,11 +1,12 @@
-import 'dart:math';
 
+import 'package:dongsilweb/widgets/button.dart';
+import 'package:dongsilweb/widgets/footer.dart';
+import 'package:dongsilweb/widgets/menu_bar.dart';
 import 'package:flutter/material.dart';
 
 import '../constant/colors.dart';
 import '../constant/spacings.dart';
 import '../data/model/grid_item.dart';
-import '../widgets/blog.dart';
 
 class GridPostPage extends StatefulWidget {
   const GridPostPage({Key? key}) : super(key: key);
