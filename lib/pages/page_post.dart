@@ -1,6 +1,5 @@
-import 'package:dongsilweb/widgets/footer.dart';
 import 'package:dongsilweb/widgets/image_wrapper.dart';
-import 'package:dongsilweb/widgets/menu_bar.dart';
+import 'package:dongsilweb/widgets/main_container.dart';
 import 'package:dongsilweb/widgets/navigation.dart';
 import 'package:dongsilweb/widgets/tag.dart';
 import 'package:flutter/material.dart';
@@ -15,13 +14,12 @@ class PostPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SingleChildScrollView(
+    return MainContainer(
+      container: SingleChildScrollView(
         child: Container(
           margin: const EdgeInsets.symmetric(horizontal: 32),
           child: Column(
             children: <Widget>[
-              const MenuBar(),
               const ImageWrapper(
                 image: "assets/images/mugs_side_bw_w1080.jpg",
               ),
@@ -88,14 +86,10 @@ class PostPage extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(vertical: 80),
                 child: const PostNavigation(),
               ),
-              divider,
-              // Footer
-              const Footer(),
             ],
           ),
         ),
       ),
-      backgroundColor: Colors.white,
     );
   }
 }

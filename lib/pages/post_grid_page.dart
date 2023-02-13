@@ -1,7 +1,5 @@
-
 import 'package:dongsilweb/widgets/button.dart';
-import 'package:dongsilweb/widgets/footer.dart';
-import 'package:dongsilweb/widgets/menu_bar.dart';
+import 'package:dongsilweb/widgets/main_container.dart';
 import 'package:flutter/material.dart';
 
 import '../constant/colors.dart';
@@ -26,14 +24,12 @@ class _GridPostPageState extends State<GridPostPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SingleChildScrollView(
+    return MainContainer(
+      container: SingleChildScrollView(
         child: Container(
           margin: const EdgeInsets.symmetric(horizontal: 32),
           child: Column(
             children: <Widget>[
-              //TODO: 태그버튼들과 메뉴 화면에 고정시키는 방법 찾아보기
-              const MenuBar(),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -103,12 +99,10 @@ class _GridPostPageState extends State<GridPostPage> {
                   ),
                 ),
               ),
-              const Footer(),
             ],
           ),
         ),
       ),
-      backgroundColor: Colors.white,
     );
   }
 

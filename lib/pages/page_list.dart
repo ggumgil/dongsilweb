@@ -1,11 +1,10 @@
-import 'package:dongsilweb/widgets/footer.dart';
-import 'package:dongsilweb/widgets/menu_bar.dart';
+import 'package:dongsilweb/widgets/main_container.dart';
+
 import 'package:dongsilweb/widgets/navigation.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/blog.dart';
 
-// TODO Replace with object model.
 const String listItemTitleText = "A BETTER BLOG FOR WRITING";
 const String listItemPreviewText =
     "Sed elementum tempus egestas sed sed risus. Mauris in aliquam sem fringilla ut morbi tincidunt. Placerat vestibulum lectus mauris ultrices eros. Et leo duis ut diam. Auctor neque vitae tempus […]";
@@ -15,15 +14,14 @@ class ListPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Stack(
+    return MainContainer(
+      container: Stack(
         children: <Widget>[
           SingleChildScrollView(
             child: Container(
               margin: const EdgeInsets.symmetric(horizontal: 32),
               child: Column(
                 children: <Widget>[
-                  const MenuBar(),
                   const ListItem(
                       imageUrl:
                           "assets/images/paper_flower_overhead_bw_w1080.jpg",
@@ -59,14 +57,12 @@ class ListPage extends StatelessWidget {
                     child: const ListNavigation(),
                   ),
                   divider,
-                  const Footer(),
                 ],
               ),
             ),
           ),
         ],
       ),
-      backgroundColor: Colors.white,
     );
   }
 }

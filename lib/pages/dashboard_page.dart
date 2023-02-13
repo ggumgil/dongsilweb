@@ -1,11 +1,8 @@
-import 'dart:ui';
-
 import 'package:dongsilweb/constant/colors.dart';
 import 'package:dongsilweb/gen/assets.gen.dart';
 import 'package:dongsilweb/model/side_menu_model.dart';
 import 'package:dongsilweb/widgets/carousel.dart';
-import 'package:dongsilweb/widgets/footer.dart';
-import 'package:dongsilweb/widgets/menu_bar.dart';
+import 'package:dongsilweb/widgets/main_container.dart';
 import 'package:flutter/material.dart';
 
 class DashBoardPage extends StatelessWidget {
@@ -15,38 +12,30 @@ class DashBoardPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        children: [
-          const MenuBar(),
-          Expanded(
-            child: LayoutBuilder(
-              builder: (context, constraints) => Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  const Flexible(
-                    flex: 4,
-                    child: _SideBar(),
-                  ),
-                  const Flexible(
-                    flex: 10,
-                    child: _Contents(),
-                  ),
-                  SizedBox(
-                    height: constraints.maxHeight,
-                    child: const VerticalDivider(),
-                  ),
-                  const Flexible(
-                    flex: 4,
-                    child: _SideList(),
-                  ),
-                ],
-              ),
+    return MainContainer(
+      container: LayoutBuilder(
+        builder: (context, constraints) => Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            const Flexible(
+              flex: 4,
+              child: _SideBar(),
             ),
-          ),
-          const Footer(),
-        ],
+            const Flexible(
+              flex: 10,
+              child: _Contents(),
+            ),
+            SizedBox(
+              height: constraints.maxHeight,
+              child: const VerticalDivider(),
+            ),
+            const Flexible(
+              flex: 4,
+              child: _SideList(),
+            ),
+          ],
+        ),
       ),
     );
   }

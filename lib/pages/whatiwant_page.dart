@@ -1,10 +1,8 @@
 import 'package:dongsilweb/constant/colors.dart';
-import 'package:dongsilweb/widgets/footer.dart';
-import 'package:dongsilweb/widgets/menu_bar.dart';
+import 'package:dongsilweb/widgets/main_container.dart';
 import 'package:dongsilweb/widgets/web_card.dart';
 import 'package:flutter/material.dart';
 
-import '../widgets/blog.dart';
 
 class WhatIWantPage extends StatelessWidget {
   const WhatIWantPage({
@@ -13,11 +11,10 @@ class WhatIWantPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SingleChildScrollView(
+    return MainContainer(
+      container: SingleChildScrollView(
         child: Column(
           children: [
-            const MenuBar(),
             WebCard(
                 width: MediaQuery.of(context).size.width,
                 height: 200,
@@ -38,8 +35,6 @@ class WhatIWantPage extends StatelessWidget {
                 height: 200,
                 color: randomColor,
                 text: '이렇게 원하는 것이 있는 나'),
-            divider,
-            const Footer(),
           ],
         ),
       ),

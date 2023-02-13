@@ -8,6 +8,7 @@ class Carousel extends StatefulWidget {
   final List? images;
 
   //All the images on this Carousel.
+  // ignore: prefer_typing_uninitialized_variables
   final defaultImage;
 
   //The transition animation timing curve. Default is [Curves.ease]

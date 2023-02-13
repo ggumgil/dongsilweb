@@ -1,8 +1,7 @@
 import 'package:dongsilweb/constant/spacings.dart';
 import 'package:dongsilweb/widgets/blog.dart';
 import 'package:dongsilweb/widgets/button.dart';
-import 'package:dongsilweb/widgets/footer.dart';
-import 'package:dongsilweb/widgets/menu_bar.dart';
+import 'package:dongsilweb/widgets/main_container.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -15,11 +14,10 @@ class ProjectsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SingleChildScrollView(
+    return MainContainer(
+      container: SingleChildScrollView(
         child: Column(
           children: [
-            const MenuBar(),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: const [
@@ -234,8 +232,6 @@ class ProjectsPage extends StatelessWidget {
                 ),
               ],
             ),
-            divider,
-            const Footer(),
           ],
         ),
       ),

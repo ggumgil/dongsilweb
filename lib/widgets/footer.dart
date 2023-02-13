@@ -9,9 +9,14 @@ class Footer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 40),
-      child: const Align(
+      child: Align(
         alignment: Alignment.centerRight,
-        child: TextBody(text: "Dongsil Copyright © 2023"),
+        child: Column(
+          children: const [
+            TextBody(text: "Dongsil Copyright © 2023"),
+            TextBodySecondary(text: "Sejong City, Republic of Korea"),
+          ],
+        ),
       ),
     );
   }

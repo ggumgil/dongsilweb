@@ -14,7 +14,7 @@ class MenuBar extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       children: <Widget>[
         Container(
-          margin: const EdgeInsets.symmetric(vertical: 30),
+          margin: const EdgeInsets.symmetric(vertical: 10),
           child: Row(
             children: <Widget>[
               InkWell(
@@ -36,8 +36,8 @@ class MenuBar extends StatelessWidget {
                   child: Wrap(
                     children: <Widget>[
                       TextButton(
-                        onPressed: () => Navigator.popUntil(context,
-                            ModalRoute.withName(Navigator.defaultRouteName)),
+                        onPressed: () =>
+                            Navigator.pushNamed(context, Routes.home),
                         style: menuButtonStyle,
                         child: Text(
                           menu['sub_title_2']!,
