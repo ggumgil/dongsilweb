@@ -1,3 +1,4 @@
+import 'package:dongsilweb/pages/page_post.dart';
 import 'package:dongsilweb/pages/post_grid_page.dart';
 import 'package:dongsilweb/pages/projects_page.dart';
 import 'package:dongsilweb/pages/whatiwant_page.dart';
@@ -25,8 +26,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         colorSchemeSeed: const Color(0xff6750a4),
       ),
-      builder: (context, child) => ResponsiveWrapper.builder(
-          BouncingScrollWrapper.builder(context, child!),
+      builder: (context, child) => ResponsiveWrapper.builder(BouncingScrollWrapper.builder(context, child!),
           maxWidth: 1200,
           minWidth: 450,
           defaultScale: true,
@@ -52,6 +52,8 @@ class MyApp extends StatelessWidget {
             case Routes.post:
               return const GridPostPage();
             case Routes.contact:
+              return const PostPage();
+            case Routes.dashboard:
               return const DashBoardPage();
             default:
               return const HomePage();

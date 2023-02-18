@@ -8,9 +8,9 @@ class Routes {
   static const String contact = "/contact";
   static const String whatiwant = "/whatiwant";
   static const String projects = "/projects";
+  static const String dashboard = "/dashboard";
 
-  static Route<T> fadeThrough<T>(RouteSettings settings, WidgetBuilder page,
-      {int duration = 300}) {
+  static Route<T> fadeThrough<T>(RouteSettings settings, WidgetBuilder page, {int duration = 300}) {
     return PageRouteBuilder<T>(
       settings: settings,
       transitionDuration: Duration(milliseconds: duration),

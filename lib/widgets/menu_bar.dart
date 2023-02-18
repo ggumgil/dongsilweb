@@ -21,14 +21,8 @@ class MenuBar extends StatelessWidget {
                 hoverColor: Colors.transparent,
                 highlightColor: Colors.transparent,
                 splashColor: Colors.transparent,
-                onTap: () => Navigator.popUntil(
-                    context, ModalRoute.withName(Navigator.defaultRouteName)),
-                child: Text(menu['sub_title_1']!,
-                    style: GoogleFonts.montserrat(
-                        color: textPrimary,
-                        fontSize: 30,
-                        letterSpacing: 3,
-                        fontWeight: FontWeight.w500)),
+                onTap: () => Navigator.popUntil(context, ModalRoute.withName(Navigator.defaultRouteName)),
+                child: Text(menu['sub_title_1']!, style: GoogleFonts.montserrat(color: textPrimary, fontSize: 30, letterSpacing: 3, fontWeight: FontWeight.w500)),
               ),
               Flexible(
                 child: Container(
@@ -36,43 +30,45 @@ class MenuBar extends StatelessWidget {
                   child: Wrap(
                     children: <Widget>[
                       TextButton(
-                        onPressed: () =>
-                            Navigator.pushNamed(context, Routes.home),
+                        onPressed: () => Navigator.pushNamed(context, Routes.home),
                         style: menuButtonStyle,
                         child: Text(
                           menu['sub_title_2']!,
                         ),
                       ),
                       TextButton(
-                        onPressed: () =>
-                            Navigator.pushNamed(context, Routes.whatiwant),
+                        onPressed: () => Navigator.pushNamed(context, Routes.whatiwant),
                         style: menuButtonStyle,
                         child: Text(
                           menu['sub_title_3']!,
                         ),
                       ),
                       TextButton(
-                        onPressed: () =>
-                            Navigator.pushNamed(context, Routes.projects),
+                        onPressed: () => Navigator.pushNamed(context, Routes.projects),
                         style: menuButtonStyle,
                         child: Text(
                           menu['sub_title_4']!,
                         ),
                       ),
                       TextButton(
-                        onPressed: () =>
-                            Navigator.pushNamed(context, Routes.post),
+                        onPressed: () => Navigator.pushNamed(context, Routes.post),
                         style: menuButtonStyle,
                         child: Text(
                           menu['sub_title_5']!,
                         ),
                       ),
                       TextButton(
-                        onPressed: () =>
-                            Navigator.pushNamed(context, Routes.contact),
+                        onPressed: () => Navigator.pushNamed(context, Routes.contact),
                         style: menuButtonStyle,
                         child: Text(
                           menu['sub_title_6']!,
+                        ),
+                      ),
+                      TextButton(
+                        onPressed: () => Navigator.pushNamed(context, Routes.dashboard),
+                        style: menuButtonStyle,
+                        child: Text(
+                          menu['sub_title_7']!,
                         ),
                       ),
                     ],
@@ -82,10 +78,7 @@ class MenuBar extends StatelessWidget {
             ],
           ),
         ),
-        Container(
-            height: 1,
-            margin: const EdgeInsets.only(bottom: 30),
-            color: const Color(0xFFEEEEEE)),
+        Container(height: 1, margin: const EdgeInsets.only(bottom: 30), color: const Color(0xFFEEEEEE)),
       ],
     );
   }
