@@ -5,8 +5,8 @@ import 'package:dongsilweb/widgets/text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class MenuBar extends StatelessWidget {
-  const MenuBar({Key? key}) : super(key: key);
+class MenuDiv extends StatelessWidget {
+  const MenuDiv({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

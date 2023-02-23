@@ -11,7 +11,7 @@ class FlutterPage extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          const MenuBar(),
+          const MenuDiv(),
           Container(color: Colors.amber),
         ],
       ),

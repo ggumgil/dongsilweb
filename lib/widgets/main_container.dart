@@ -11,7 +11,7 @@ class MainContainer extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          const MenuBar(),
+          const MenuDiv(),
           Expanded(
             child: container,
           ),
