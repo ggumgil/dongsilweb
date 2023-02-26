@@ -5,6 +5,7 @@ import 'package:dongsilweb/data/model/music_link_item.dart';
 import 'package:dongsilweb/widgets/blog.dart';
 import 'package:dongsilweb/widgets/music_link_tile.dart';
 import 'package:dongsilweb/widgets/main_container.dart';
+import 'package:dongsilweb/widgets/space.dart';
 import 'package:dongsilweb/widgets/text.dart';
 import 'package:flutter/material.dart';
 
@@ -22,19 +23,19 @@ class HomePage extends StatelessWidget {
             Row(
               mainAxisSize: MainAxisSize.max,
               children: [
-                SizedBox(
+                Container(
+                  padding: const EdgeInsets.all(16),
                   width: 300,
                   height: 300,
-                  child: Image.asset('assets/images/coffee_paperclips_pencil_angled_bw_w1080.jpg', fit: BoxFit.fitHeight),
+                  child: Image.asset('assets/images/walking_to_goal.png', fit: BoxFit.fitHeight),
                 ),
-                const SizedBox(
-                  width: 100,
-                ),
-                Expanded(child: TextBody(text: contents['introduction']!)),
+                sizedBoxWidthLarge,
+                Expanded(child: TextBody(text: contents['ggumgil']!)),
               ],
             ),
             divider,
             Container(
+              padding: edgeInsetLeftSmall,
               alignment: Alignment.centerLeft,
               child: TextHeadlineSecondary(
                 text: contents['musicLinkTitle']!,
@@ -49,43 +50,24 @@ class HomePage extends StatelessWidget {
                 )
               ],
             ),
-            // Row(
-            //   mainAxisSize: MainAxisSize.max,
-            //   children: [
-            //     SizedBox(
-            //       width: 100,
-            //       height: 100,
-            //       child: Image.asset(
-            //           'assets/images/joy_note_coffee_eyeglasses_overhead_bw_w1080.jpg',
-            //           fit: BoxFit.fitHeight),
-            //     ),
-            //     const Expanded(
-            //       child: SizedBox(
-            //           height: 100,
-            //           child: TextBodySecondary(text: 'How are you doing?')),
-            //     ),
-            //   ],
-            // ),
             divider,
             Row(
               mainAxisSize: MainAxisSize.max,
               children: [
-                SizedBox(
-                  width: MediaQuery.of(context).size.width * 0.5,
-                  height: 300,
-                  child: const Card(
-                    color: Colors.amber,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(30)),
-                    ),
-                    child: Center(child: Text('hi')),
-                  ),
-                ),
-                const Expanded(
-                  child: SizedBox(
-                    height: 300,
-                    child: TextHeadline(text: '이렇게 오랜만에 써보는 글이네요.'),
-                  ),
+                // SizedBox(
+                //   width: MediaQuery.of(context).size.width * 0.5,
+                //   height: 300,
+                //   child: const Card(
+                //     color: Colors.amber,
+                //     shape: RoundedRectangleBorder(
+                //       borderRadius: BorderRadius.all(Radius.circular(30)),
+                //     ),
+                //     child: Center(child: Text('hi')),
+                //   ),
+                // ),
+                Padding(
+                  padding: edgeInsetLeftSmall,
+                  child: TextBody(text: contents['introduction']!),
                 ),
               ],
             ),

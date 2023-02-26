@@ -1,6 +1,7 @@
 import 'package:dongsilweb/constant/colors.dart';
 import 'package:dongsilweb/constant/text.dart';
 import 'package:dongsilweb/routes.dart';
+import 'package:dongsilweb/widgets/space.dart';
 import 'package:dongsilweb/widgets/text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -17,6 +18,7 @@ class MenuDiv extends StatelessWidget {
           margin: const EdgeInsets.symmetric(vertical: 10),
           child: Row(
             children: <Widget>[
+              sizedBoxWidthSmall,
               InkWell(
                 hoverColor: Colors.transparent,
                 highlightColor: Colors.transparent,
