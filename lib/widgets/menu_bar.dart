@@ -1,10 +1,11 @@
-import 'package:dongsilweb/constant/colors.dart';
-import 'package:dongsilweb/constant/text.dart';
 import 'package:dongsilweb/routes.dart';
 import 'package:dongsilweb/widgets/space.dart';
 import 'package:dongsilweb/widgets/text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+import '../common/constant/colors.dart';
+import '../common/constant/text.dart';
 
 class MenuDiv extends StatelessWidget {
   const MenuDiv({Key? key}) : super(key: key);

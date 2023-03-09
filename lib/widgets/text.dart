@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../constant/colors.dart';
-import '../constant/spacings.dart';
-import '../constant/style.dart';
+import '../common/constant/colors.dart';
+import '../common/constant/spacings.dart';
+import '../common/constant/style.dart';
 
 class TextBody extends StatelessWidget {
   final String text;
@@ -81,8 +81,7 @@ class TextBlockquote extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: marginBottom24,
-      decoration: const BoxDecoration(
-          border: Border(left: BorderSide(width: 2, color: Color(0xFF333333)))),
+      decoration: const BoxDecoration(border: Border(left: BorderSide(width: 2, color: Color(0xFF333333)))),
       padding: const EdgeInsets.only(left: 20),
       child: Align(
         alignment: Alignment.centerLeft,
@@ -95,9 +94,4 @@ class TextBlockquote extends StatelessWidget {
   }
 }
 
-ButtonStyle? menuButtonStyle = TextButton.styleFrom(
-    backgroundColor: Colors.transparent,
-    disabledForegroundColor: null,
-    foregroundColor: textSecondary,
-    textStyle: buttonTextStyle,
-    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16));
+ButtonStyle? menuButtonStyle = TextButton.styleFrom(backgroundColor: Colors.transparent, disabledForegroundColor: null, foregroundColor: textSecondary, textStyle: buttonTextStyle, padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16));

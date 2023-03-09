@@ -1,9 +1,10 @@
-import 'package:dongsilweb/constant/colors.dart';
 import 'package:dongsilweb/gen/assets.gen.dart';
 import 'package:dongsilweb/model/side_menu_model.dart';
 import 'package:dongsilweb/widgets/carousel.dart';
 import 'package:dongsilweb/widgets/main_container.dart';
 import 'package:flutter/material.dart';
+
+import '../common/constant/colors.dart';
 
 class DashBoardPage extends StatelessWidget {
   const DashBoardPage({

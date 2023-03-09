@@ -2,8 +2,8 @@ import 'package:dongsilweb/widgets/button.dart';
 import 'package:dongsilweb/widgets/main_container.dart';
 import 'package:flutter/material.dart';
 
-import '../constant/colors.dart';
-import '../constant/spacings.dart';
+import '../common/constant/colors.dart';
+import '../common/constant/spacings.dart';
 import '../data/model/grid_item.dart';
 
 class GridPostPage extends StatefulWidget {
@@ -70,8 +70,7 @@ class _GridPostPageState extends State<GridPostPage> {
               ),
               GridView.count(
                 shrinkWrap: true,
-                padding: const EdgeInsets.symmetric(
-                    horizontal: 10.0, vertical: 10.0),
+                padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
                 crossAxisSpacing: 10.0,
                 mainAxisSpacing: 17.0,
                 childAspectRatio: 1,
@@ -81,10 +80,7 @@ class _GridPostPageState extends State<GridPostPage> {
                   gridItems.length,
                   (index) => GridTile(
                     child: Container(
-                      decoration: BoxDecoration(
-                          color: randomColor,
-                          borderRadius:
-                              const BorderRadius.all(Radius.circular(15.0))),
+                      decoration: BoxDecoration(color: randomColor, borderRadius: const BorderRadius.all(Radius.circular(15.0))),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -108,10 +104,7 @@ class _GridPostPageState extends State<GridPostPage> {
 
   void _setGridItems(String? tag) {
     setState(() {
-      tag == null
-          ? gridItems = gridItemArray
-          : gridItems =
-              gridItemArray.where((element) => element.tag == tag).toList();
+      tag == null ? gridItems = gridItemArray : gridItems = gridItemArray.where((element) => element.tag == tag).toList();
     });
   }
 }

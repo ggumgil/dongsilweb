@@ -1,6 +1,7 @@
-import 'package:dongsilweb/constant/spacings.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+import '../common/constant/spacings.dart';
 
 class Tag extends StatelessWidget {
   final String tag;

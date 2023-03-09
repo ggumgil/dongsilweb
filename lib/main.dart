@@ -5,7 +5,7 @@ import 'package:dongsilweb/pages/whatiwant_page.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
-import 'constant/text.dart';
+import 'common/constant/text.dart';
 import 'pages/dashboard_page.dart';
 import 'pages/home_page.dart';
 import 'routes.dart';

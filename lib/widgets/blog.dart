@@ -3,8 +3,8 @@ import 'package:dongsilweb/widgets/button.dart';
 import 'package:dongsilweb/widgets/image_wrapper.dart';
 import 'package:flutter/material.dart';
 
-import '../constant/spacings.dart';
-import '../constant/style.dart';
+import '../common/constant/spacings.dart';
+import '../common/constant/style.dart';
 import '../routes.dart';
 import 'text.dart';
 
@@ -75,9 +75,7 @@ class ListItem extends StatelessWidget {
   final String? imageUrl;
   final String? description;
 
-  const ListItem(
-      {Key? key, required this.title, this.imageUrl, this.description})
-      : super(key: key);
+  const ListItem({Key? key, required this.title, this.imageUrl, this.description}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

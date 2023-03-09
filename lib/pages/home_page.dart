@@ -1,6 +1,5 @@
 import 'dart:ui';
 
-import 'package:dongsilweb/constant/text.dart';
 import 'package:dongsilweb/data/model/music_link_item.dart';
 import 'package:dongsilweb/widgets/blog.dart';
 import 'package:dongsilweb/widgets/music_link_tile.dart';
@@ -8,6 +7,8 @@ import 'package:dongsilweb/widgets/main_container.dart';
 import 'package:dongsilweb/widgets/space.dart';
 import 'package:dongsilweb/widgets/text.dart';
 import 'package:flutter/material.dart';
+
+import '../common/constant/text.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({

@@ -1,6 +1,7 @@
-import 'package:dongsilweb/constant/colors.dart';
-import 'package:dongsilweb/constant/style.dart';
 import 'package:flutter/material.dart';
+
+import '../common/constant/colors.dart';
+import '../common/constant/style.dart';
 
 class PostNavigation extends StatelessWidget {
   const PostNavigation({Key? key}) : super(key: key);

@@ -4,8 +4,9 @@ import 'package:dongsilweb/widgets/navigation.dart';
 import 'package:dongsilweb/widgets/tag.dart';
 import 'package:flutter/material.dart';
 
-import '../constant/spacings.dart';
-import '../constant/style.dart';
+import '../common/constant/spacings.dart';
+
+import '../common/constant/style.dart';
 import '../widgets/blog.dart';
 import '../widgets/text.dart';
 
@@ -39,9 +40,7 @@ class PostPage extends StatelessWidget {
               ),
               const Align(
                 alignment: Alignment.centerLeft,
-                child: TextBody(
-                    text:
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Faucibus a pellentesque sit amet porttitor eget. Ipsum nunc aliquet bibendum enim facilisis gravida."),
+                child: TextBody(text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Faucibus a pellentesque sit amet porttitor eget. Ipsum nunc aliquet bibendum enim facilisis gravida."),
               ),
               const Align(
                 alignment: Alignment.centerLeft,
@@ -51,8 +50,7 @@ class PostPage extends StatelessWidget {
               ),
               const Align(
                 alignment: Alignment.centerLeft,
-                child:
-                    TextHeadlineSecondary(text: "Secondary Headline Example"),
+                child: TextHeadlineSecondary(text: "Secondary Headline Example"),
               ),
               const Align(
                 alignment: Alignment.centerLeft,
@@ -71,17 +69,12 @@ class PostPage extends StatelessWidget {
               ),
               const Align(
                 alignment: Alignment.centerLeft,
-                child: TagWrapper(tags: [
-                  Tag(tag: "Writing"),
-                  Tag(tag: "Photography"),
-                  Tag(tag: "Development")
-                ]),
+                child: TagWrapper(tags: [Tag(tag: "Writing"), Tag(tag: "Photography"), Tag(tag: "Development")]),
               ),
               ...authorSection(
                   imageUrl: "assets/images/avatar_default.png",
                   name: "Type Pages",
-                  bio:
-                      "Mattis molestie a iaculis at erat pellentesque adipiscing commodo. Suspendisse interdum consectetur libero id faucibus nisl tincidunt eget. Sed euismod nisi porta lorem. Aliquet nec ullamcorper sit amet risus nullam eget felis eget."),
+                  bio: "Mattis molestie a iaculis at erat pellentesque adipiscing commodo. Suspendisse interdum consectetur libero id faucibus nisl tincidunt eget. Sed euismod nisi porta lorem. Aliquet nec ullamcorper sit amet risus nullam eget felis eget."),
               Container(
                 padding: const EdgeInsets.symmetric(vertical: 80),
                 child: const PostNavigation(),

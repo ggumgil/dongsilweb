@@ -1,13 +1,9 @@
-import 'package:dongsilweb/constant/style.dart';
 import 'package:flutter/material.dart';
 
+import '../common/constant/style.dart';
+
 class WebCard extends StatelessWidget {
-  const WebCard(
-      {super.key,
-      required this.width,
-      required this.height,
-      required this.color,
-      required this.text});
+  const WebCard({super.key, required this.width, required this.height, required this.color, required this.text});
 
   final double width;
   final double height;
