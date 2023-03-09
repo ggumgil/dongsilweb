@@ -1,7 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 
-import 'package:dongsilweb/data/model/music_link_item.dart';
+import 'package:dongsilweb/data/model/music_link_item_model.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class MusicLinkTile extends StatelessWidget {

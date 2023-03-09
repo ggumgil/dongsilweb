@@ -1,6 +1,6 @@
 import 'dart:ui';
 
-import 'package:dongsilweb/data/model/music_link_item.dart';
+import 'package:dongsilweb/data/model/music_link_item_model.dart';
 import 'package:dongsilweb/widgets/blog.dart';
 import 'package:dongsilweb/widgets/music_link_tile.dart';
 import 'package:dongsilweb/widgets/main_container.dart';

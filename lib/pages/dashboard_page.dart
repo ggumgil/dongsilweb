@@ -1,15 +1,34 @@
+import 'package:dongsilweb/common/constant/enum.dart';
+import 'package:dongsilweb/data/model/blog_model.dart';
 import 'package:dongsilweb/gen/assets.gen.dart';
-import 'package:dongsilweb/model/side_menu_model.dart';
+
 import 'package:dongsilweb/widgets/carousel.dart';
 import 'package:dongsilweb/widgets/main_container.dart';
 import 'package:flutter/material.dart';
 
 import '../common/constant/colors.dart';
 
-class DashBoardPage extends StatelessWidget {
+class DashBoardPage extends StatefulWidget {
   const DashBoardPage({
     super.key,
   });
+
+  @override
+  State<DashBoardPage> createState() => _DashBoardPageState();
+}
+
+class _DashBoardPageState extends State<DashBoardPage> {
+  Map<String, List<Blog>> blogs = {};
+
+  @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
+  void didChangeDependencies() async {
+    super.didChangeDependencies();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -19,9 +38,9 @@ class DashBoardPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            const Flexible(
+            Flexible(
               flex: 4,
-              child: _SideBar(),
+              child: _SideBar(blogs: blogs),
             ),
             const Flexible(
               flex: 10,
@@ -99,7 +118,10 @@ class _Contents extends StatelessWidget {
 class _SideBar extends StatelessWidget {
   const _SideBar({
     Key? key,
+    required this.blogs,
   }) : super(key: key);
+
+  final Map<String, List<Blog>> blogs;
 
   @override
   Widget build(BuildContext context) {
@@ -107,13 +129,13 @@ class _SideBar extends StatelessWidget {
       controller: ScrollController(),
       child: Column(
         children: List.generate(
-          sideMenus.length,
+          ContentCategory.values.length,
           (index) => ListTile(
             key: UniqueKey(),
-            leading: sideMenus[index].icon,
+            leading: ContentCategory.values[index].icon,
             hoverColor: Colors.red,
-            title: Text(sideMenus[index].title),
-            trailing: const Text('()'),
+            title: Text(ContentCategory.values[index].categoryName),
+            trailing: Text('(${blogs[ContentCategory.values[index].name]?.length})'),
           ),
         ),
       ),

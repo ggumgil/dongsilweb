@@ -3,7 +3,7 @@ import 'dart:convert';
 
 class Blog {
   int? id;
-  String contentType;
+  String category;
   String title;
   String content;
   String tags;
@@ -11,18 +11,17 @@ class Blog {
   String modifyDate;
   Blog({
     this.id,
-    required this.contentType,
+    required this.category,
     required this.title,
     required this.content,
     required this.tags,
     required this.createDate,
     required this.modifyDate,
   });
-  
 
   Blog copyWith({
     int? id,
-    String? contentType,
+    String? category,
     String? title,
     String? content,
     String? tags,
@@ -31,7 +30,7 @@ class Blog {
   }) {
     return Blog(
       id: id ?? this.id,
-      contentType: contentType ?? this.contentType,
+      category: category ?? this.category,
       title: title ?? this.title,
       content: content ?? this.content,
       tags: tags ?? this.tags,
@@ -43,7 +42,7 @@ class Blog {
   Map<String, dynamic> toMap() {
     return <String, dynamic>{
       'id': id,
-      'contentType': contentType,
+      'category': category,
       'title': title,
       'content': content,
       'tags': tags,
@@ -55,7 +54,7 @@ class Blog {
   factory Blog.fromMap(Map<String, dynamic> map) {
     return Blog(
       id: map['id'] != null ? map['id'] as int : null,
-      contentType: map['contentType'] as String,
+      category: map['category'] as String,
       title: map['title'] as String,
       content: map['content'] as String,
       tags: map['tags'] as String,
@@ -70,31 +69,18 @@ class Blog {
 
   @override
   String toString() {
-    return 'Blog(id: $id, contentType: $contentType, title: $title, content: $content, tags: $tags, createDate: $createDate, modifyDate: $modifyDate)';
+    return 'Blog(id: $id, category: $category, title: $title, content: $content, tags: $tags, createDate: $createDate, modifyDate: $modifyDate)';
   }
 
   @override
   bool operator ==(covariant Blog other) {
     if (identical(this, other)) return true;
-  
-    return 
-      other.id == id &&
-      other.contentType == contentType &&
-      other.title == title &&
-      other.content == content &&
-      other.tags == tags &&
-      other.createDate == createDate &&
-      other.modifyDate == modifyDate;
+
+    return other.id == id && other.category == category && other.title == title && other.content == content && other.tags == tags && other.createDate == createDate && other.modifyDate == modifyDate;
   }
 
   @override
   int get hashCode {
-    return id.hashCode ^
-      contentType.hashCode ^
-      title.hashCode ^
-      content.hashCode ^
-      tags.hashCode ^
-      createDate.hashCode ^
-      modifyDate.hashCode;
+    return id.hashCode ^ category.hashCode ^ title.hashCode ^ content.hashCode ^ tags.hashCode ^ createDate.hashCode ^ modifyDate.hashCode;
   }
 }

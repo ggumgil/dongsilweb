@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 import '../common/constant/colors.dart';
 import '../common/constant/spacings.dart';
-import '../data/model/grid_item.dart';
+import '../data/model/grid_item_model.dart';
 
 class GridPostPage extends StatefulWidget {
   const GridPostPage({Key? key}) : super(key: key);

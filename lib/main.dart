@@ -3,6 +3,8 @@ import 'package:dongsilweb/pages/post_grid_page.dart';
 import 'package:dongsilweb/pages/projects_page.dart';
 import 'package:dongsilweb/pages/whatiwant_page.dart';
 import 'package:flutter/material.dart';
+
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
 import 'common/constant/text.dart';
@@ -10,7 +12,10 @@ import 'pages/dashboard_page.dart';
 import 'pages/home_page.dart';
 import 'routes.dart';
 
-void main() {
+void main() async {
+  await Hive.initFlutter();
+  await Hive.openBox('blog_articles');
+  await Hive.openBox('settings');
   runApp(const MyApp());
 }
 
